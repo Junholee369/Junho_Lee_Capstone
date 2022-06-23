@@ -1,0 +1,44 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Entity;
+
+import java.security.Timestamp;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="user")
+public class User {
+
+@Id
+@GeneratedValue(strategy= GenerationType.AUTO)
+private long id;
+
+@Column(nullable = false)
+private String fName;
+
+@Column(nullable = false)
+private String lName;
+
+@Column(nullable = false)
+private String uEmail;
+
+@Column(nullable = false)
+private String uPassword;
+
+
+//@Column(nullable = false)
+//private List<Role> role;
+
+private Timestamp uDate;
+
+}
+

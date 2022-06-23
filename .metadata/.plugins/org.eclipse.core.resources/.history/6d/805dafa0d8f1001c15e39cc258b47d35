@@ -1,0 +1,66 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.User;
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Service.UserService;
+
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/users")
+	public String listUsers(Model model) {
+		List<User> users = userService.getAllUser();
+		
+		model.addAttribute("listUsers", users);
+		return "users";
+	}
+	
+	@GetMapping("users/new")
+	public String createUserFrom(Model model) {
+		
+		User user = new User();
+		model.addAttribute("user",user);
+		return "new_User";
+		
+	}
+	
+	
+	@GetMapping("/users/edit/{id}")
+	public String editUserForm(@PathVariable Long id, Model model) {
+		model.addAttribute("user", userService.getUserById(id));
+		return "edit_User";
+	}
+	
+	@GetMapping("/users/edit/{id}")
+	public String updateUser(@PathVariable Long id,
+			@ModelAttribute("user") User user,
+			Model model) {
+		
+		User existingUser = userService.getUserById(id);
+		existingUser.setUserId(id);
+		existingUser.setUserFirstName(user.getUserFirstName());
+		existingUser.setUserLastName(user.getUserLastName());
+		existingUser.setUserEmail(user.getUserEmail());
+		existingUser.setUserPassword(user.getUserPassword());
+		
+		userService.updateUser(existingUser);
+		return "redirect:/users";
+		
+	}
+	
+	@GetMapping("/users/delete/{id}")
+	public String deleteUser(@PathVariable Long id) {
+		userService.deleteUser(id);
+		return "redirect:/users";
+	}
+	
+}

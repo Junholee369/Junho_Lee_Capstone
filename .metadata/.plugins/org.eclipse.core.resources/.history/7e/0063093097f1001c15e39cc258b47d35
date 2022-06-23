@@ -1,0 +1,35 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.User;
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Service.UserService;
+
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/users")
+	public String listUsers(Model model) {
+		List<User> users = userService.getAllUser();
+		
+		model.addAttribute("listUsers", users);
+		return "users";
+	}
+	
+	@GetMapping("/product/edit/{id}")
+	public String updateUser(@PathVariable Long id,
+			@ModelAttribute("user") User user,
+			Model model) {
+		
+		User existingUser = userService.getUserById(id);
+		
+	}
+	
+}

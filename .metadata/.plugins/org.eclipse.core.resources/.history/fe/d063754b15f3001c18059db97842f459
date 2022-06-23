@@ -1,0 +1,69 @@
+package com.example.Lee_Junho_CaseStudy.Entity;
+
+import java.security.Timestamp;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+@Entity
+//@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "product")
+public class Product {
+	
+@Id
+@GeneratedValue(strategy= GenerationType.IDENTITY)	
+private long productId;
+
+@Column(nullable = false)
+private String productName;
+
+@Column(nullable = false)
+private String productDescription;
+
+@Column(nullable = false)
+private Double productPrice;
+
+@Column(nullable = false)
+private int productQuantity;
+
+
+//allows the user to be able to choose from a a list of category
+//@ManyToOne
+//@JoinColumn(name = "category", nullable = false)
+//private List<Category> catName;
+
+
+
+@Column(nullable = false)
+@DateTimeFormat(pattern="yyy-MM-dd")
+private Date productDate;
+
+@PrePersist
+protected void onCreate() {this.productDate=new Date();}
+
+}

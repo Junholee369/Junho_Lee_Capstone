@@ -1,0 +1,17 @@
+ package com.example.Lee_Junho_PlushyShop_CaseStudy.Service;
+
+import java.util.List;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.Product;
+
+public interface ProductService {
+	
+	public List<Product> getAll();
+	
+	public Product get(long id);
+	
+	public void addProduct(Product product);
+	
+	public void deleteProduct(long id);
+	
+}

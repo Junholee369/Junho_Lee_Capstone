@@ -1,0 +1,11 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Service.UserService;
+
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+}

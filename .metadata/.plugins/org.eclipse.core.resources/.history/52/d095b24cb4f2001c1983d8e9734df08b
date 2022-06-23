@@ -1,0 +1,10 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.Category;
+
+@Repository
+public class CategoryRepo extends JpaRepository<Category, Long>{
+
+}

@@ -1,0 +1,46 @@
+1655701699055	Rename package 'UserRepoTests'
+1655702251791	Delete element
+1655761035403	Rename field 'user_Id'
+1655775127926	Rename type 'UserDetails'
+1655775305513	Rename compilation unit 'UserDetailsService.java'
+1655784678091	Rename field 'role_Name'
+1655784702012	Rename field 'product_Name'
+1655784708243	Rename field 'product_Description'
+1655784715856	Rename field 'product_Price'
+1655784722215	Rename field 'product_Quantity'
+1655784727954	Rename field 'product_Date'
+1655995468308	Delete element
+1655995472431	Delete element
+1655995477101	Delete element
+1655995480776	Delete element
+1655995484536	Delete element
+1655995487682	Delete element
+1655995490711	Delete element
+1655995494983	Delete element
+1655995498775	Delete element
+1655995504373	Delete element
+1655995509605	Delete element
+1655995513560	Delete element
+1655995570972	Delete element
+1655995578989	Delete element
+1655995583305	Delete element
+1655995586981	Delete element
+1655996461652	Delete element
+1655996572404	Rename compilation unit 'userService.java'
+1655997149483	Rename type 'UserRepo'
+1655997171619	Rename type 'ProductRepo'
+1655997181114	Rename type 'CategoryRepo'
+1655998591879	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy'
+1655998607817	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Config'
+1655998618613	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Controller'
+1655998632484	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Controller.dto'
+1655998651989	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Entity'
+1655998679705	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Repository'
+1655998688797	Rename package 'com.example.Lee_Junho_PlushyShop_CaseStudy.Service'
+1655998876326	Move compilation unit
+1655998891231	Rename package 'com.example.Lee_Junho_CaseStudy.Controller'
+1655998907361	Rename package 'com.example.Lee_Junho_CaseStudy.Controller.dto'
+1656003796811	Move compilation unit
+1656003811983	Delete element
+1656010044338	Rename package 'com.example.Lee_CaseStudy'
+1656012085121	Copy files

@@ -1,0 +1,10 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Entity;
+
+public class User {
+private long id;
+private String fName;
+private String lName;
+private String phone;
+private String email;
+
+}

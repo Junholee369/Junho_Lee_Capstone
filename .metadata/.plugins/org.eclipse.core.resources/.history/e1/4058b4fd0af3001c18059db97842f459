@@ -1,0 +1,10 @@
+package com.example.Lee_Junho_CaseStudy.Service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.example.Lee_Junho_CaseStudy.Controller.dto.UserRegistrationDto;
+import com.example.Lee_Junho_CaseStudy.Entity.User;
+
+public interface UserService extends UserDetailsService{
+	User save(UserRegistrationDto registrationDto);
+}

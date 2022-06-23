@@ -1,0 +1,21 @@
+package TestRepository;
+
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Replace;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.test.annotation.Rollback;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Repository.UserRepo;
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Rollback(false)
+public class UserRepoTests {
+	 @Autowired
+	    private TestEntityManager entityManager;
+	     
+	    @Autowired
+	    private UserRepo userRepo;
+}

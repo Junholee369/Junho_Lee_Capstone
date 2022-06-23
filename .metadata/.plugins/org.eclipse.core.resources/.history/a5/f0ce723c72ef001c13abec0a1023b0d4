@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Shop Catalog</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Hydro Bottle</a>
+
+		<!-- Toggler/collapsible Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" th:href="@{/products}">Product List</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+
+	<div class="container my-2">
+		<div class="row">
+			<h1>Products</h1>
+		</div>
+		<div>
+			<a th:href="@{/products/new}" class="btn btn-primary btn-sm mb-3">Add
+				Product</a>
+		</div>
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead class="thead-dark">
+				<tr>
+					<th>Product Name</th>
+					<th>Product Description</th>
+					<th>Product Price</th>
+					<th>Product Quantity</th>
+
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="product : ${listProducts}">
+					<td th:text="${product.product_Name}"></td>
+					<td th:text="${product.product_Description}"></td>
+					<td th:text="${product.product_Price}"></td>
+					<td th:text="${product.product_Quantity}"></td>
+					<td>
+						<a th:href= "@{/products/edit/{id}(id=${product.product_Id})}"
+						class = "btn btn-primary"></a>
+					</td>
+									
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

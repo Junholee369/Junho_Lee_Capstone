@@ -1,0 +1,11 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Service;
+
+import java.util.List;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.User;
+
+public interface UserService {
+	List<User> getAllUser();
+	
+	
+}

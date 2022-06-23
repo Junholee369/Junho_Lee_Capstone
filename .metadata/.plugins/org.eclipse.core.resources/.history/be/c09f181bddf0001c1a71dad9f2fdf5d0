@@ -1,0 +1,53 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Entity;
+
+import java.security.Timestamp;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "product")
+public class Product {
+	
+@Id
+@GeneratedValue(strategy= GenerationType.IDENTITY)	
+private long product_Id;
+
+@Column(nullable = false)
+private String product_Name;
+
+@Column(nullable = false)
+private String product_Description;
+
+@Column(nullable = false)
+private Double product_Price;
+
+@Column(nullable = false)
+private int product_Quantity;
+
+
+@Column(nullable = false)
+@DateTimeFormat(pattern="yyy-MM-dd")
+private Date product_Date;
+
+@PrePersist
+protected void onCreate() {this.product_Date=new Date();}
+
+}

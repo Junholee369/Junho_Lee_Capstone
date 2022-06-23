@@ -1,0 +1,50 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Entity;
+
+import java.security.Timestamp;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="user")
+public class User {
+
+@Id
+@GeneratedValue(strategy= GenerationType.IDENTITY)
+private long uId;
+
+@Column(nullable = false)
+private String fName;
+
+@Column(nullable = false)
+private String lName;
+
+@Column(nullable = false)
+private String uEmail;
+
+@Column(nullable = false)
+private String uPassword;
+
+@ManyToOne
+@JoinColumn(name= "roleId", nullable = false)
+private Role role;
+
+@Column(nullable = false)
+private Date uDate;
+
+}
+

@@ -1,0 +1,46 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.User;
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Repository.UserRepo;
+
+@Service("userService")
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepo userRepo;
+
+	@Override
+	public List<User> getAllUser() {
+		return userRepo.findAll();
+	}
+
+	@Override
+	public User getUserById(long userId) {
+		return userRepo.findById(userId).get();
+	}
+
+	@Override
+	public void addUser(User user) {
+		userRepo.save(user);
+		
+	}
+
+	@Override
+	public void deleteUser(long userId) {
+		userRepo.deleteById(userId);
+	}
+	
+
+	@Override
+	public void updateUser(User user) {
+		userRepo.save(user);
+	}
+
+
+}

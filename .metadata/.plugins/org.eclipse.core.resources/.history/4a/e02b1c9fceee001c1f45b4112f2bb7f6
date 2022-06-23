@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Product</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">Hydro Bottle</a>
+
+		<!-- Toggler/collapsible Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="@{/products}">Product List</a></li>
+			</ul>
+		</div>
+	</nav>
+<br>
+<br>
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class= "text-center"> Create New Product</h1>
+				<div class="card-body">
+
+
+					<form action="#" th:action="@{/products}"
+						th:object="${product}" method="POST">
+
+						<div class="form-group">
+							<lable> Product Name</lable>
+							<input type="text" name="productName" th:field="*{product_Name}"
+								class="form-control" placeholder="Enter Product Name" />
+						</div>
+						<div class="form-group">
+							<lable> Product Description</lable>
+							<input type="text" name="productDescription" th:field="*{product_Description}"
+								class="form-control" placeholder="Enter Product Description" />
+						</div>
+						<div class="form-group">
+							<lable> Product Price</lable>
+							<input type="text" name="productPrice" th:field="*{product_Price}"
+								class="form-control" placeholder="Enter Product Name" />
+						</div>
+						<div class="form-group">
+							<lable> Product Quantity</lable>
+							<input type="text" name="productQuantity" th:field="*{product_Quantity}"
+								class="form-control" placeholder="Enter Product Name" />
+						</div>
+
+
+
+
+						<div class = "box-footer">
+						<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+</body>
+
+</html>

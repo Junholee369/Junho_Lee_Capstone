@@ -1,0 +1,52 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.Product;
+import com.example.Lee_Junho_PlushyShop_CaseStudy.Repository.ProductRepo;
+
+@Service("productService")
+public class ProductServiceImpl implements ProductService{
+
+	@Autowired
+	private ProductRepo productRepo;
+	
+	
+	//list all
+	@Override
+	public List<Product> getAllProducts() {
+	return productRepo.findAll();
+	}
+
+	
+	//get one product
+	@Override
+	public Product getProductById(long productId) {
+		return productRepo.findById(productId).get();
+	}
+
+	
+	//add new product
+	@Override
+	public addProduct(Product product) {
+		return productRepo.save(product);		
+	}
+
+	
+	//delete a product
+	@Override
+	public void deleteProduct(long productId) {
+		productRepo.deleteById(productId);
+	}
+
+	//update a product
+	@Override
+	public  update(Product product) {
+		return productRepo.save(product);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.example.Lee_Junho_PlushyShop_CaseStudy.Service;
+
+public interface UserService extends UserDetailsService{
+	User save(UserRegistrationDto registrationDto);
+}
