@@ -1,0 +1,9 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class ProductServiceTest {
+
+	@Autowired
+	ProductService productService;
+}

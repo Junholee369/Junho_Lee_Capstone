@@ -23,7 +23,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
     <fullyQualifiedTypeName name="com.example.Lee_Junho_PlushyShop_CaseStudy.Entity.User"/>
     <fullyQualifiedTypeName name="com.example.Lee_Junho_PlushyShop_CaseStudy.Controller.dto.UserRegistrationDto"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.example.Lee_Junho_CaseStudy.Entity.Role"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -40,12 +39,17 @@
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="com.example.Lee_Junho_CaseStudy.Web.dto.UserRegistrationDto"/>
     <fullyQualifiedTypeName name="javax.servlet.Registration"/>
-    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Repository.ProductRepository"/>
     <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Repository.UserRepository"/>
     <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Entity.Role"/>
-    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Service.ProductService"/>
-    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Entity.Product"/>
     <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Entity.User"/>
     <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Web.dto.UserRegistrationDto"/>
     <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Service.UserService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Service.ProductService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Repository.ProductRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="com.example.Inventory_Management_Capstone.Entity.Product"/>
 </qualifiedTypeNameHistroy>

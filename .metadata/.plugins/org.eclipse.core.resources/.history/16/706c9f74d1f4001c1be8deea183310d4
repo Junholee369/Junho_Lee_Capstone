@@ -1,0 +1,31 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.Inventory_Management_Capstone.Entity.Product;
+
+class ProductServiceTest {
+
+	@Autowired
+	public ProductService productService;
+	
+	@Test
+	public void testCreateProduct() throws Exception{
+				
+		Product product = new Product();
+		product.setProductName("TestProduct");
+		product.setProductDescription("Testing product");
+		product.setProductPrice(13.0);
+		product.setProductQuantity(0);
+		product.setProductDate(new Date(2022-06-25));
+	
+	
+		
+	}
+
+}

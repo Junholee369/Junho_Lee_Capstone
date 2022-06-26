@@ -1,0 +1,27 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+
+import com.example.Inventory_Management_Capstone.Entity.Product;
+
+class ProductServiceTest {
+
+//	@Test
+//	public void testCreateProduct() throws Exception{
+//		Date date = new Date();
+//				
+//		Product product = new Product();
+//		product.setProductName("TestProduct");
+//		product.setProductDescription("Testing product");
+//		product.setProductPrice(13.0);
+//		product.setProductQuantity(0);
+//		product.setProductDate(date.getDate());
+//	
+//		
+//	}
+
+}

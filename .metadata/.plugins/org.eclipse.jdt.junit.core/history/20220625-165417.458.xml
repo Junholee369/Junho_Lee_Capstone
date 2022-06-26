@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceTest" project="Inventory_Management_Capstone" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.example.Inventory_Management_Capstone.Service.ProductServiceTest" time="0.007" displayname="ProductServiceTest" uniqueid="[engine:junit-jupiter]/[class:com.example.Inventory_Management_Capstone.Service.ProductServiceTest]">
+    <testcase name="testCreateProduct" classname="com.example.Inventory_Management_Capstone.Service.ProductServiceTest" time="0.007" displayname="testCreateProduct()" uniqueid="[engine:junit-jupiter]/[class:com.example.Inventory_Management_Capstone.Service.ProductServiceTest]/[method:testCreateProduct()]"/>
+  </testsuite>
+</testrun>

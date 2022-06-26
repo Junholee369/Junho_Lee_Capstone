@@ -1,0 +1,18 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.Inventory_Management_Capstone.Repository.ProductRepository;
+
+@SpringBootTest
+public class ProductServiceTest {
+
+	@Autowired
+	private ProductService productService;
+	
+	   @MockBean
+	    private ProductRepository productRepository;
+	
+	
+}
