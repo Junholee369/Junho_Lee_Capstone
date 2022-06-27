@@ -1,0 +1,46 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.Inventory_Management_Capstone.Entity.Product;
+
+
+@SpringBootTest
+public class ProductServiceTest {
+
+	@Autowired
+	public ProductService productService;
+	
+	@Test
+	public void testAddProduct() throws Exception{
+				
+		Product product = new Product();
+		product.setProductId(50);
+		product.setProductName("TestProduct");
+		product.setProductDescription("Testing product");
+		product.setProductPrice(13.0);
+		product.setProductQuantity(3);
+		product.setProductDate(new Date(2022-06-25));
+		productService.addProduct(product);
+		
+		
+		assertEquals(product.getProductId(), 50);
+		assertEquals(product.getProductName(), "TestProduct");
+		assertEquals(product.getProductDescription(), "Testing product");
+		assertEquals(product.getProductPrice(), 13);
+		assertEquals(product.getProductQuantity(), 3);
+		assertEquals(product.getProductDate(), 2022-06-25);
+		
+		
+		
+	}
+	
+
+	
+}

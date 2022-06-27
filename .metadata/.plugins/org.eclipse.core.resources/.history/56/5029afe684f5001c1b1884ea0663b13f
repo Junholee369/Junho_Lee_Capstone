@@ -1,0 +1,15 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+public class UserServiceTest {
+
+	@Autowired
+	public UserService userService;
+	
+	
+	
+}

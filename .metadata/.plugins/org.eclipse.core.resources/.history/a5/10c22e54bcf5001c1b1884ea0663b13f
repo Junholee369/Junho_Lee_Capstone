@@ -1,0 +1,39 @@
+package com.example.Inventory_Management_Capstone.Service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.Inventory_Management_Capstone.Entity.User;
+import com.example.Inventory_Management_Capstone.Repository.UserRepository;
+import com.example.Inventory_Management_Capstone.Web.dto.UserRegistrationDto;
+
+@SpringBootTest
+public class UserServiceTest {
+
+	@Autowired
+	public UserRegistrationDto userRegistrationDto;
+	
+	@Autowired
+	public UserService userService;
+	
+	@Test
+	void findUserTest() throws Exception{
+		
+		User user =new User();	
+		user.setId((long) 50);
+		user.setFirstName("testFirst");
+		user.setLastName("testLast");
+		user.setEmail("test@email.com");
+		user.setPassword("somepassword");		
+		
+		assertNotNull(user);
+	
+		
+	}
+	
+	
+}
