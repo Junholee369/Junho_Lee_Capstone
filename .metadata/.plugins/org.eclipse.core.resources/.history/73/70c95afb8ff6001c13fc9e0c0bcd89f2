@@ -1,0 +1,28 @@
+body {
+	background-color: #9CB4CC;
+}
+
+table {
+	background-color: #CBD5F4;
+}
+
+.logo{
+	justify-content:center;
+	align-items: center;
+    display: flex
+}
+
+.AppName{
+	font-family: 'Caveat', cursive;
+
+}
+
+
+.navBtn:hover{
+	background-color: #CBD5F4;
+	border-radius: 12px;
+}
+
+
+
+
